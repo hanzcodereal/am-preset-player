@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next';
-import { Hanken_Grotesk } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
-const font = Hanken_Grotesk({
+const font = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   display: 'swap'
@@ -10,7 +10,7 @@ const font = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   title: 'AM Preset Player',
-  description: 'Unduh preset XML Alight Motion dari katalog, link share, Google Drive, dan audio TikTok.'
+  description: 'Putar preset Alight Motion, ganti media, lalu ekspor menjadi video.'
 };
 
 export const viewport: Viewport = {
@@ -24,4 +24,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={font.className}>{children}</body>
     </html>
   );
-  }
+}
